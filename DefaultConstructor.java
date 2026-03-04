@@ -1,7 +1,7 @@
 class StudentDetails {
     int roll;
     String name;
-    public StudentDetails() {
+    StudentDetails() {
         System.out.println("This is a default constructor");
     }
 }
