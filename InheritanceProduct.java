@@ -1,3 +1,4 @@
+// Hierarchical Inheritance Implementation
 class Product {
     private String name;
     private double price;
