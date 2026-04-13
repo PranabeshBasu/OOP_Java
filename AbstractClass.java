@@ -6,9 +6,18 @@ abstract class Car {
         System.out.println("The car is making noise!!!");
     }
 }
-class Manuanl extends Car {
+// Abstract class extending another abstract class
+abstract class Dealer extends Car {
+    abstract public void isItopen();
+}
+class Manuanl extends Dealer {
+    @Override
     public void start() {
         System.out.println("The manual car is starting");
+    }
+    @Override
+    public void isItopen() {
+        System.out.println("Yes the car is open!!");
     }
 }
 
@@ -28,5 +37,10 @@ public class AbstractClass {
         Car automaticcar = new Automatic();
         automaticcar.start();
         automaticcar.noise();
+        System.out.println();
+        Dealer car = new Manuanl();
+        car.start();
+        car.isItopen();
+        car.noise();
     }
 }
