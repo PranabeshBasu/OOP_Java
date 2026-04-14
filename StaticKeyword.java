@@ -14,6 +14,10 @@ class BankAcc {
     public String getName() {
         return name;
     }
+    //Static method
+    static int sum(int a, int b) {
+        return a + b;
+    }
 }
 public class StaticKeyword {
     public static void main(String[] args) {
@@ -23,6 +27,8 @@ public class StaticKeyword {
         BankAcc b2 = new BankAcc("Manabesh", 2000);
         System.out.println(b2.getName());
         System.out.println(b2.getCount());
+        //Accesing the static method
+        System.out.println(BankAcc.sum(5, 8));
 
     }
 }
