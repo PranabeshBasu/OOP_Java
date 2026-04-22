@@ -24,6 +24,7 @@ class Student {
 }
 public class OnetoOne {
     public static void main(String[] args) {
+        // This is the example of Aggregation as well
         Passport p1 = new Passport("1131562725724");
         Student s1 = new Student("Pranabesh Basu", p1);
         s1.displayDetails();
