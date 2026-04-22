@@ -18,6 +18,7 @@ class Student {
 }
 class College {
     private String CollegeName;
+    //one college is interacting with many students / objects of Student class one -> many
     private List<Student> students;
 
     College(String collegeName) {
