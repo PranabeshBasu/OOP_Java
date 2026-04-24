@@ -7,6 +7,7 @@ public class TryCatch {
         list.add(6);
         // System.out.println(list.get(3)); this is not a valid index of the list
         try {
+            System.out.println("--CONNECTING TO THE DB--");
             int x = 10/0;
             System.out.println(list.get(3)); //Now this block will not execute
         }
@@ -16,6 +17,10 @@ public class TryCatch {
         //Multiple catch blocks possible
         catch (Exception e) {
             System.out.println("Exception caught: "+e.getMessage());
+        }
+        //Finally block is basically used to close the resources
+        finally {
+            System.out.println("--DISCONNECTING DB--");
         }
     }
 }
