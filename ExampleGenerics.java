@@ -26,8 +26,22 @@ class GenericClass<T> {
         System.out.println();
     }
 }
-
-public class ExampleGenerics {
+class PrintArray { //Not a generic class
+    public <T> void printArray(T[] arr) { //Generic Method
+        for (T i: arr) {
+            System.out.print(i +" ");
+        }
+        System.out.println();
+    }
+}
+public class ExampleGenerics { //This is not a Generic Class
+    //Generic Method
+    public static <T> void printArray(T[] arr) {
+        for (T i: arr) {
+            System.out.print(i +" ");
+        }
+        System.out.println();
+    }
     public static void main(String[] args) {
         GenericClass<Integer> obj = new GenericClass<>();
         obj.add(20);
@@ -38,5 +52,11 @@ public class ExampleGenerics {
         System.out.println("value at index 2 is: "+ obj.getvalue(2));
         obj.removeList();
         obj.printlist();
+
+        Integer[] arr = {1, 2, 3, 4, 5};
+        printArray(arr);
+
+        PrintArray p = new PrintArray();
+        p.printArray(arr);
     }
 }
