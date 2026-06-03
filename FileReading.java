@@ -1,9 +1,7 @@
 import java.io.*;
 public class FileReading {
     public static void main(String[] args) throws IOException {
-        BufferedReader br = null;
-        try {
-            br = new BufferedReader(new FileReader("text.txt"));
+        try (BufferedReader br = new BufferedReader(new FileReader("text.txt"))) {
             String s;
             while ((s = br.readLine()) != null) {
                 System.out.println("Line: "+s);
@@ -14,9 +12,6 @@ public class FileReading {
             // }
         } catch (Exception e) {
             System.out.println(e.getMessage());
-        }
-        finally {
-            br.close();
         }
     }
 }
